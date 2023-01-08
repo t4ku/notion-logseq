@@ -1,4 +1,4 @@
-module github.com/skanehira/go-cli-template
+module github.com/t4ku/notion-logseq
 
 go 1.17
 

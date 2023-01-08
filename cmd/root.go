@@ -8,7 +8,7 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use: "go-cli-template",
+	Use: "notion-logseq",
 }
 
 func exitError(msg interface{}) {

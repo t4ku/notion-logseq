@@ -1,11 +1,11 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/skanehira/go-cli-template?style=social)
-![GitHub](https://img.shields.io/github/license/skanehira/go-cli-template)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/skanehira/go-cli-template)
-![GitHub all releases](https://img.shields.io/github/downloads/skanehira/go-cli-template/total)
-![GitHub CI Status](https://img.shields.io/github/workflow/status/skanehira/go-cli-template/ci?label=CI)
-![GitHub Release Status](https://img.shields.io/github/workflow/status/skanehira/go-cli-template/Release?label=release)
+![GitHub Repo stars](https://img.shields.io/github/stars/t4ku/notion-logseq?style=social)
+![GitHub](https://img.shields.io/github/license/t4ku/notion-logseq)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/t4ku/notion-logseq)
+![GitHub all releases](https://img.shields.io/github/downloads/t4ku/notion-logseq/total)
+![GitHub CI Status](https://img.shields.io/github/workflow/status/t4ku/notion-logseq/ci?label=CI)
+![GitHub Release Status](https://img.shields.io/github/workflow/status/t4ku/notion-logseq/Release?label=release)
 
-# go-cli-template
+# notion-logseq
 This template is help you to quick implement some CLI using Go.
 
 This repository is contains bellow.
@@ -20,8 +20,8 @@ This repository is contains bellow.
 
 ## How to use
 1. fork this repository
-2. replace `skanehira` to your user name using `sed`(or others)
+2. replace `t4ku` to your user name using `sed`(or others)
 3. run `make init`
 
 ## Author
-skanehira
+t4ku
