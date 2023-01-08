@@ -6,7 +6,12 @@
 ![GitHub Release Status](https://img.shields.io/github/workflow/status/t4ku/notion-logseq/Release?label=release)
 
 # notion-logseq
-This template is help you to quick implement some CLI using Go.
+
+## Overview
+
+Get notion database items and sync them in Logseq entry
+
+## Github Actions
 
 This repository is contains bellow.
 
@@ -17,11 +22,6 @@ This repository is contains bellow.
   - goreleaser
   - Dependabot
   - CodeQL Analysis (Go)
-
-## How to use
-1. fork this repository
-2. replace `t4ku` to your user name using `sed`(or others)
-3. run `make init`
 
 ## Author
 t4ku
