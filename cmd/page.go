@@ -6,7 +6,7 @@ package cmd
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 	"strings"
@@ -45,9 +45,8 @@ to quickly create a Cobra application.`,
 		res, _ := http.DefaultClient.Do(req)
 
 		defer res.Body.Close()
-		body, _ := ioutil.ReadAll(res.Body)
-
 		//fmt.Println(string(body))
+		body, _ := io.ReadAll(res.Body)
 
 		results := gjson.Get(string(body), "results")
 		results.ForEach(func(key, value gjson.Result) bool {
