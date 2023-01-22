@@ -1,6 +1,5 @@
 /*
 Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
@@ -13,6 +12,15 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/tidwall/gjson"
+	"gopkg.in/go-playground/validator.v9"
+)
+
+type Options struct {
+	Format string `validate:"oneof=csv"`
+}
+
+var (
+	o = &Options{}
 )
 
 // pageCmd represents the page command
@@ -26,6 +34,19 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Args: cobra.ExactArgs(1),
+	PreRunE: func(cmd *cobra.Command, args []string) error {
+		var validate = validator.New()
+		err := validate.Struct(*o)
+
+		if err != nil {
+			var errorText []string
+			for _, err := range err.(validator.ValidationErrors) {
+				errorText = append(errorText, err.Tag())
+			}
+			return fmt.Errorf("Parameter error: %s", strings.Join(errorText, "\n"))
+		}
+		return nil
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		//fmt.Println("page called")
 		database_id := args[0]
@@ -66,6 +87,7 @@ to quickly create a Cobra application.`,
 
 func init() {
 	rootCmd.AddCommand(pageCmd)
+	pageCmd.Flags().StringVarP(&o.Format, "format", "f", "csv", "specify output format")
 
 	// Here you will define your flags and configuration settings.
 
