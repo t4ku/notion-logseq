@@ -3,7 +3,7 @@ module github.com/t4ku/notion-logseq
 go 1.17
 
 require (
-	github.com/joho/godotenv v1.4.0
+	github.com/joho/godotenv v1.5.1
 	github.com/spf13/cobra v1.6.1
 	github.com/tidwall/gjson v1.14.4
 	gopkg.in/go-playground/validator.v9 v9.31.0
